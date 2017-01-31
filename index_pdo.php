@@ -1,7 +1,7 @@
 <?php
 	$bdd = new PDO('mysql:host=localhost;dbname=mon_armoire;charset=utf8', 'root', 'simplonco');
-	$reponse = $bdd->query('SELECT * FROM mes_chaussettes');
-?>
+	$reponse = $bdd->query('SELECT * FROM mes_chaussettes WHERE couleur=\'bleu\' && pointure>40');
+?>\
 
 <!DOCTYPE html>
 <html lang="en">
