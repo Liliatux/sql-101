@@ -5,7 +5,7 @@
 	ORM::configure('username', 'root');
 	ORM::configure('password', 'simplonco');
 
-	$table = ORM::for_table('mes_chaussettes')->find_many();
+	$table = ORM::for_table('mes_chaussettes')->where('couleur', 'rouge')->find_many();
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +17,7 @@
 <body>
 	<table>
 		<tr>
+			<th>ID</th>
 			<th>Pointure</th>
 			<th>Température de lavage</th>
 			<th>Description</th>
@@ -28,11 +29,11 @@
 		foreach($table as $value):
 		?>
 			<tr>
-				<td><?= $value->pointure; ?></td>
-				<td><?= $value->temp_lavage; ?></td>
-				<td><?= $value->description; ?></td>
-				<td><?= $value->couleur; ?></td>
-				<td><?= $value->date_lavage; ?></td>
+				<td><?= $value->id; ?></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
 		<?php endforeach; ?>
 	</table>
