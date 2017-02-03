@@ -1,5 +1,8 @@
 <?php 
-	require 'Controllers/ChaussettesController.php';
+	require_once 'vendor/autoload.php';
+	define ('ROOT', __DIR__);
+	
+	use Lilia\Controllers\ChaussettesController;
 
-	(new ChaussettesController())->chaussettes();
+	ChaussettesController::chaussettes();
 ?>

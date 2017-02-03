@@ -1,4 +1,7 @@
 <?php 
+	namespace Lilia\Models;
+	use ORM;
+	
 	class Armoire {
 		private $db;
 

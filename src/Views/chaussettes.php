@@ -7,15 +7,18 @@
 </head>
 <body>
 	<h1>Affichage des 50 premières entrées</h1>
-	<table class="ui table">
-		<tr>
-			<th>ID</th>
-			<th>Pointure</th>
-			<th>Température de lavage</th>
-			<th>Description</th>
-			<th>Couleur</th>
-			<th>Date du lavage</th>	
-		</tr>
+	<table class="ui celled table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Pointure</th>
+				<th>Température de lavage</th>
+				<th>Description</th>
+				<th>Couleur</th>
+				<th>Date du lavage</th>	
+			</tr>
+		</thead>
+		<tbody>
 		<?php foreach($armoire as $value):?>
 			<tr>
 				<td><?= $value->id; ?></td>
@@ -26,6 +29,7 @@
 				<td><?= $value->date_lavage; ?></td>
 			</tr>
 		<?php endforeach; ?>
+		</tbody>
 	</table>
 </body>
 </html>
