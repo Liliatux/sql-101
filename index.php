@@ -4,5 +4,9 @@
 	
 	use Lilia\Controllers\ChaussettesController;
 
-	ChaussettesController::chaussettes();
+	if($_GET['action'] === 'edit') {
+		ChaussettesController::edit($_GET['id']);
+	} else {
+		ChaussettesController::table();
+	}
 ?>

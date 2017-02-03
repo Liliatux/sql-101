@@ -24,7 +24,7 @@
 
 		public static function get($id) {
 			$get = new self();
-			return $get->db->find_one($id);
+			return $get->getInstance()->find_one($id);
 		}
 	}
 

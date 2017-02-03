@@ -15,7 +15,8 @@
 				<th>Température de lavage</th>
 				<th>Description</th>
 				<th>Couleur</th>
-				<th>Date du lavage</th>	
+				<th>Date du lavage</th>
+				<th>Edition</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -27,6 +28,7 @@
 				<td><?= $value->description; ?></td>
 				<td><?= $value->couleur; ?></td>
 				<td><?= $value->date_lavage; ?></td>
+				<td><a href="?action=edit&id=<?= $value->id ?>" class="ui button icon"><i class="icon edit"></i>Edit</a></td>
 			</tr>
 		<?php endforeach; ?>
 		</tbody>
